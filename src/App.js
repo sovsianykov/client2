@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { CssBaseline } from "@material-ui/core";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home";
+import Order from "./pages/Order";
+import Layout from "./components/Layout/Layout";
+import OrdersStore from "./pages/OrdersStore";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CssBaseline />
+      <Router>
+        <Header />
+        <Switch>
+          <Layout>
+            <Route path="/" exact component={Home} />
+            <Route path="/order"  component={Order} />
+            <Route path="/orders-store"  component={OrdersStore} />
+          </Layout>
+        </Switch>
+      </Router>
+      <Footer />
     </div>
   );
 }

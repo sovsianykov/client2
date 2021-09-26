@@ -1,0 +1,19 @@
+.formContainer {
+  box-shadow: 0 0  5px #736c6c ;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .inputForm {
+    font-weight: 600;
+  }
+  .formItem {
+    border-radius: 3px;
+    height: 50px;
+  }
+  .submitButton {
+    margin: 20px auto 0  0 ;
+  }
+}

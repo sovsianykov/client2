@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  .navbarItem {
+    height: 100%;
+    padding: 5px;
+    margin: 0 5px;
+    line-height: 20px;
+
+  }
+  a {
+    text-decoration: none;
+  }
+}
